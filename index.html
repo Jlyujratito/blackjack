@@ -12,9 +12,9 @@
         blackjack
     </header>
     <div class="row mt-2">
-        <div class="col text-center">   
+        <div id="div-botones" class="col text-center">   
             <button id="btn-jugar" class="btn btn-primary">Nuevo Juego</button>
-            <button id="btn-pedir" class="btn btn-success" disabled>Pedir Carta</button>
+            <button id="btn-pedir" class="btn btn-success">Pedir Carta</button>
             <button id="btn-detener" class="btn btn-danger" disabled>Detener</button>
         </div>
     </div>    
@@ -24,13 +24,25 @@
             <h1 class="text-center">Jugador 1 <small class="text-muted">- 0 puntos</small></h1>
             <div id="jugador-cartas" class="d-flex justify-content-center gap-2">
                 <!-- Cartas del jugador -->
+
+            </div>
+        </div>
+    </div>
+    <div class="row container">
+        <div class="col">
+            <h1 class="text-center">Computadora<small class="text-muted">- 0 puntos</small></h1>
+            <div id="computadora-cartas" class="d-flex justify-content-center gap-2">
+                <!-- Cartas de la computadora -->
+                 <img class="carta" src="assets/cartas/2H.png">
+                 <img class="carta" src="assets/cartas/2H.png">
+                 <img class="carta" src="assets/cartas/2H.png">
+                 <img class="carta" src="assets/cartas/2H.png">
+                 <img class="carta" src="assets/cartas/2H.png">
                  <img class="carta" src="assets/cartas/2H.png">
             </div>
         </div>
-        <div class="col">
-
-        </div>
-    </div>        
-    <script src="assets/js/script.js"></script>
+    </div>          
+    <script src="assets/js/underscore-min.js"></script>
+    <script src="assets/js/juego.js"></script>
 </body>
 </html>

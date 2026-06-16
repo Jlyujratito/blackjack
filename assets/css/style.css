@@ -10,10 +10,11 @@ html,body{
     color: white;   
 }
 .carta{
-    width: 100px;
-    height: 150px;
-    background-color: white;
-    border: 1px solid black;
-    display: inline-block;
-    margin: 10px;
+    position: relative;
+    width: 150px;
+    left: 100px;
+    margin-left: -75px;
+}
+#computadora-cartas #jugador-cartas{
+    height: 200px;
 }
