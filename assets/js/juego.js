@@ -40,18 +40,55 @@ btnPedir.addEventListener('click', () => {
     const imgCarta = document.createElement('img');
     imgCarta.src = `assets/cartas/${cartaJugador}.png`;
     imgCarta.classList.add('carta');
-    document.querySelector('#jugador-cartas').appendChild(imgCarta);  git   
+    document.querySelector('#jugador-cartas').appendChild(imgCarta);
 
     if (puntosJugador > 21) {
-        alert('Perdiste, te pasaste de 21 puntos');
         btnPedir.disabled = true;
+        btnDetener.disabled = true;
+        turnoComputadora(puntosJugador);
     }
     else if (puntosJugador === 21) {
-        alert('Ganaste, tienes 21 puntos');
         btnPedir.disabled = true;
+        btnDetener.disabled = true;
+         turnoComputadora(puntosJugador);
     }
-
 });
+ const turnoComputadora = (puntosJugador)=>{
+    const divCartasComputadora = document.querySelector('#computadora-cartas');
+
+    do{
+        cartaComputadora = obtenerCarta();
+        puntosComputadora += valorCarta(cartaComputadora);
+        puntosJugadorHTML[1].innerText = puntosComputadora;
+        const imgCarta = document.createElement('img');
+        imgCarta.src = `assets/cartas/${cartaComputadora}.png`;
+        imgCarta.classList.add('carta');
+        divCartasComputadora.appendChild(imgCarta);
+    }
+    while(puntosComputadora <= puntosJugador && puntosComputadora <= 21)
+ }
+
+const btnDetener = document.querySelector('#btn-detener');
+btnDetener.addEventListener('click', () => {
+    btnPedir.disabled = true;
+    btnDetener.disabled = true;
+    turnoComputadora(puntosJugador);
+});
+const btnNuevoJuego = document.querySelector('#btn-jugar');
+btnNuevoJuego.addEventListener('click', () => {
+    deck = [];
+    deck = creardeck();
+    puntosJugador = 0;
+    puntosComputadora = 0;
+    puntosJugadorHTML[0].innerText = puntosJugador;
+    puntosJugadorHTML[1].innerText = puntosComputadora;
+    document.querySelector('#jugador-cartas').innerHTML = '';
+    document.querySelector('#computadora-cartas').innerHTML = '';
+    btnPedir.disabled = false;
+    btnDetener.disabled = false;
+}); 
+
+
 
 
 
