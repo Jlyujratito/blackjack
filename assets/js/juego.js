@@ -64,10 +64,25 @@ btnPedir.addEventListener('click', () => {
         imgCarta.src = `assets/cartas/${cartaComputadora}.png`;
         imgCarta.classList.add('carta');
         divCartasComputadora.appendChild(imgCarta);
+        if(puntosJugador > 21)
+        {break;}
     }
-    while(puntosComputadora <= puntosJugador && puntosComputadora <= 21)
- }
-
+    while(puntosComputadora <= puntosJugador && puntosComputadora < 21)
+        
+        setTimeout(() => {
+                    if(puntosJugador > 21)
+                    {   
+                        alert('¡Perdiste! La computadora ganó.');
+                    }else if (puntosComputadora <= 21 && (21 - puntosComputadora) < (21 - puntosJugador)) {
+                        alert('Gana la Computadora');
+                    }else if(puntosComputadora === puntosJugador){
+                        alert('Nadie Gana');
+                    }else{
+                        alert('Ganaste');
+                    }
+        },1000 );
+ 
+}
 const btnDetener = document.querySelector('#btn-detener');
 btnDetener.addEventListener('click', () => {
     btnPedir.disabled = true;

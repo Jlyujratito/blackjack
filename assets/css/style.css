@@ -17,4 +17,5 @@ html,body{
 }
 #computadora-cartas #jugador-cartas{
     height: 200px;
+    width: 200px;
 }
