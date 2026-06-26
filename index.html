@@ -14,15 +14,15 @@
     <div class="row mt-2">
         <div id="div-botones" class="col text-center">   
             <button id="btn-jugar" class="btn btn-primary">Nuevo Juego</button>
-            <button id="btn-pedir" class="btn btn-success">Pedir Carta</button>
-            <button id="btn-detener" class="btn btn-danger">Detener</button>
+            <button id="btn-pedir" class="btn btn-success" disabled>Pedir Carta</button>
+            <button id="btn-detener" class="btn btn-danger" disabled>Detener</button>
         </div>
     </div>    
     
     <div class="row container">
         <div class="col">
             <h1 class="text-center">Jugador 1 <small class="text-muted">- 0 puntos</small></h1>
-            <div id="jugador-cartas" class="d-flex justify-content-center gap-2">
+            <div id="jugador-cartas" class="divCartas d-flex justify-content-center gap-2">
                 <!-- Cartas del jugador -->
 
             </div>
@@ -31,12 +31,15 @@
     <div class="row container">
         <div class="col">
             <h1 class="text-center">Computadora<small class="text-muted">- 0 puntos</small></h1>
-            <div id="computadora-cartas" class="d-flex justify-content-center gap-2">
+            <div id="computadora-cartas" class="divCartas d-flex justify-content-center gap-2">
                 <!-- Cartas de la computadora -->
             </div>
         </div>
     </div>          
     <script src="assets/js/underscore-min.js"></script>
     <script src="assets/js/juego.js"></script>
+    <script>
+        nuevo
+    </script>
 </body>
 </html>
